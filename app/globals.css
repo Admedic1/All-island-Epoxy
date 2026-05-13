@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 210 20% 96%;
+    --card: 210 15% 10%;
+    --card-foreground: 210 20% 96%;
+    --muted: 215 15% 55%;
+    --muted-foreground: 215 15% 70%;
+    --border: 215 14% 18%;
+    --primary: 152 42% 35%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 43 96% 56%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Tactile press feedback on interactive elements */
+  button:active,
+  a[role="button"]:active {
+    transform: scale(0.98);
+  }
+}
