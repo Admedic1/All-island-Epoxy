@@ -114,8 +114,8 @@ export function HeroSection() {
       </motion.div>
 
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/35" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/20" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-black/40 to-transparent" />
 
       {/* Content */}
       <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 py-24 md:flex-row md:items-center md:px-6 lg:py-32">
