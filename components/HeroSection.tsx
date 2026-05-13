@@ -187,7 +187,7 @@ export function HeroSection() {
             </div>
             <p className="text-sm text-white/80">
               <span className="text-amber-glow">★★★★★</span>{" "}
-              <span className="italic">"I wish I'd done it sooner!"</span>{" "}
+              <span className="italic">&ldquo;I wish I&apos;d done it sooner!&rdquo;</span>{" "}
               <span className="text-white/50">— Mike D., Commack</span>
             </p>
           </motion.div>
