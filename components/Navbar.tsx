@@ -89,7 +89,7 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-semibold text-white/80 hover:text-white",
-                pathname === link.href && "text-amber-glow",
+                pathname === link.href && "text-forest-light",
               )}
             >
               {link.label}
@@ -100,7 +100,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={`tel:${SITE.phoneTel}`}
-            className="text-sm font-bold text-white hover:text-amber-glow"
+            className="text-sm font-bold text-white hover:text-forest-light"
           >
             Call Now
           </a>
@@ -139,7 +139,7 @@ export function Navbar() {
                       <Link
                         key={a.slug}
                         href={`/floors/${a.slug}`}
-                        className="text-base font-semibold text-amber-glow/90"
+                        className="text-base font-semibold text-forest-light/90"
                       >
                         {a.label}
                       </Link>
@@ -149,7 +149,7 @@ export function Navbar() {
                     </p>
                     <Link
                       href="/garage-floor-maintenance"
-                      className="text-base font-semibold text-amber-glow/90"
+                      className="text-base font-semibold text-forest-light/90"
                     >
                       Low-Maintenance Floors
                     </Link>
@@ -183,7 +183,7 @@ export function Navbar() {
                 </Button>
                 <a
                   href={`tel:${SITE.phoneTel}`}
-                  className="text-center text-sm font-bold text-amber-glow"
+                  className="text-center text-sm font-bold text-forest-light"
                 >
                   Call Now
                 </a>

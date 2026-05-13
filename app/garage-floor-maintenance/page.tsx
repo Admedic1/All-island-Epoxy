@@ -29,8 +29,8 @@ const NIGHTMARES = [
     title: "Pressure washing every spring",
     body: "You lug out the pressure washer, soak the driveway, fight the hose around the car, blast oil stains that never fully come out, and spend two hours doing what should take ten minutes. And the concrete still looks dull when it dries.",
     label: "Annual ritual",
-    accent: "border-red-600/40 bg-red-950/20",
-    accentText: "text-red-400",
+    accent: "border-forest/40 bg-forest/20",
+    accentText: "text-forest-light",
   },
   {
     title: "Painted floors that peel within a year",
@@ -43,8 +43,8 @@ const NIGHTMARES = [
     title: "Oil stains that never come out",
     body: "You've tried dish soap, degreasers, kitty litter, and that orange spray. The stain lightens, then comes back when the sun hits it. The concrete absorbed it years ago — it's not coming out.",
     label: "Permanent stain",
-    accent: "border-red-600/40 bg-red-950/20",
-    accentText: "text-red-400",
+    accent: "border-forest/40 bg-forest/20",
+    accentText: "text-forest-light",
   },
   {
     title: "Concrete dust on everything",
@@ -202,8 +202,8 @@ const maintenanceReviews = ALL_REVIEWS.filter((r) =>
 function avatarColor(name: string) {
   const palette = [
     { bg: "bg-forest/30", text: "text-forest-light" },
-    { bg: "bg-amber/20", text: "text-amber-glow" },
-    { bg: "bg-red-900/30", text: "text-red-400" },
+    { bg: "bg-forest/20", text: "text-forest-light" },
+    { bg: "bg-forest/30", text: "text-forest-light" },
     { bg: "bg-sky-900/30", text: "text-sky-400" },
   ];
   return palette[name.charCodeAt(0) % palette.length];
@@ -248,7 +248,7 @@ export default function GarageFloorMaintenancePage() {
       {/* ── Hero ── */}
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Maintenance
           </p>
           <h1 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
@@ -282,7 +282,7 @@ export default function GarageFloorMaintenancePage() {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Sound familiar?
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -316,7 +316,7 @@ export default function GarageFloorMaintenancePage() {
 
           <p className="mt-10 text-center text-lg font-black text-white">
             None of this is necessary.{" "}
-            <Link href="/quote" className="text-amber-glow underline hover:no-underline">
+            <Link href="/quote" className="text-forest-light underline hover:no-underline">
               One installation ends all of it.
             </Link>
           </p>
@@ -339,7 +339,7 @@ export default function GarageFloorMaintenancePage() {
             {/* Header row */}
             <div className="grid grid-cols-3 border-b border-white/10 bg-zinc-900">
               <div className="px-4 py-3 text-xs font-black uppercase tracking-widest text-muted-foreground" />
-              <div className="border-l border-white/10 px-4 py-3 text-xs font-black uppercase tracking-widest text-red-400">
+              <div className="border-l border-white/10 px-4 py-3 text-xs font-black uppercase tracking-widest text-forest-light">
                 Bare / Painted Concrete
               </div>
               <div className="border-l border-white/10 px-4 py-3 text-xs font-black uppercase tracking-widest text-forest-light">
@@ -356,7 +356,7 @@ export default function GarageFloorMaintenancePage() {
                   {row.category}
                 </div>
                 <div className="flex items-start gap-2 border-l border-white/10 px-4 py-4 text-sm text-muted-foreground">
-                  <span className="mt-0.5 flex-shrink-0 text-red-500">✗</span>
+                  <span className="mt-0.5 flex-shrink-0 text-forest-light">✗</span>
                   {row.bare}
                 </div>
                 <div className="flex items-start gap-2 border-l border-white/10 px-4 py-4 text-sm text-white/90">
@@ -374,7 +374,7 @@ export default function GarageFloorMaintenancePage() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+              <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
                 The Routine
               </p>
               <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -410,7 +410,7 @@ export default function GarageFloorMaintenancePage() {
                       </p>
                     )}
                   </div>
-                  <span className="flex-shrink-0 rounded-full bg-zinc-800 px-3 py-1 text-xs font-black text-amber-glow">
+                  <span className="flex-shrink-0 rounded-full bg-zinc-800 px-3 py-1 text-xs font-black text-forest-light">
                     {s.time}
                   </span>
                 </div>
@@ -424,7 +424,7 @@ export default function GarageFloorMaintenancePage() {
       <section className="border-b border-white/10 bg-black py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               The Side Effect Nobody Warns You About
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -472,7 +472,7 @@ export default function GarageFloorMaintenancePage() {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Reviews
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -501,7 +501,7 @@ export default function GarageFloorMaintenancePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="mt-3 text-amber-glow" aria-label="5 stars">
+                  <div className="mt-3 text-forest-light" aria-label="5 stars">
                     ★★★★★
                   </div>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-white/90">
@@ -556,7 +556,7 @@ export default function GarageFloorMaintenancePage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-full border border-white/15 bg-black/40 px-4 py-2 text-sm font-semibold text-white/80 hover:border-forest/40 hover:text-amber-glow"
+                className="rounded-full border border-white/15 bg-black/40 px-4 py-2 text-sm font-semibold text-white/80 hover:border-forest/40 hover:text-forest-light"
               >
                 {link.label}
               </Link>
@@ -566,7 +566,7 @@ export default function GarageFloorMaintenancePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-r from-red-700 via-forest-dark to-forest py-16 md:py-20">
+      <section className="bg-gradient-to-r from-forest via-forest-dark to-forest py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <h2 className="text-3xl font-black text-white md:text-4xl">
             Put the Pressure Washer Away — For Good

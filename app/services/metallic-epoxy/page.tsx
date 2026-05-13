@@ -164,7 +164,7 @@ export default function MetallicEpoxyPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" />
         <div className="relative mx-auto flex min-h-[60vh] max-w-7xl flex-col justify-end px-4 pb-14 md:justify-center md:pb-0 md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Service
           </p>
           <h1 className="mt-3 max-w-2xl text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
@@ -190,7 +190,7 @@ export default function MetallicEpoxyPage() {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Color Styles
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -220,7 +220,7 @@ export default function MetallicEpoxyPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-sm font-black uppercase tracking-wider text-amber-glow">
+                  <p className="text-sm font-black uppercase tracking-wider text-forest-light">
                     {style.name}
                   </p>
                   <p className="mt-1 text-sm leading-snug text-white/85">
@@ -233,7 +233,7 @@ export default function MetallicEpoxyPage() {
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
             Don&apos;t see your color?{" "}
-            <Link href="/quote" className="font-semibold text-amber-glow underline hover:no-underline">
+            <Link href="/quote" className="font-semibold text-forest-light underline hover:no-underline">
               Tell us what you have in mind →
             </Link>
           </p>
@@ -308,7 +308,7 @@ export default function MetallicEpoxyPage() {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               FAQs
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">

@@ -26,7 +26,7 @@ export default function ServicesPage() {
     <div className="bg-ink">
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Services
           </p>
           <h1 className="mt-4 text-4xl font-black text-white md:text-5xl">

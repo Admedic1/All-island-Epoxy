@@ -72,7 +72,7 @@ export function GalleryPreview() {
     <div className="mx-auto max-w-7xl px-4 md:px-6">
       <MotionGroup className="mx-auto max-w-3xl text-center">
         <MotionItem>
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Proof
           </p>
         </MotionItem>
@@ -102,7 +102,7 @@ export function GalleryPreview() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width:768px) 100vw, 33vw"
                 />
-                <span className="absolute left-3 top-3 z-20 rounded-md bg-red-600 px-2 py-1 text-[11px] font-black uppercase tracking-wide text-white shadow-lg">
+                <span className="absolute left-3 top-3 z-20 rounded-md bg-forest px-2 py-1 text-[11px] font-black uppercase tracking-wide text-white shadow-lg">
                   Before
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

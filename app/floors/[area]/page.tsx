@@ -31,8 +31,8 @@ function galleryImageSrc(seed: string): string {
 function avatarColor(name: string) {
   const palette = [
     { bg: "bg-forest/30", text: "text-forest-light" },
-    { bg: "bg-amber/20", text: "text-amber-glow" },
-    { bg: "bg-red-900/30", text: "text-red-400" },
+    { bg: "bg-forest/20", text: "text-forest-light" },
+    { bg: "bg-forest/30", text: "text-forest-light" },
     { bg: "bg-sky-900/30", text: "text-sky-400" },
   ];
   return palette[name.charCodeAt(0) % palette.length];
@@ -61,7 +61,7 @@ const SYSTEM_LAYERS = [
   {
     label: "Color Chip Broadcast",
     description: "US Resin Supply color chips broadcast into the wet base coat — full or partial coverage. Adds texture, color, and depth.",
-    color: "bg-amber/70",
+    color: "bg-forest/20",
     textColor: "text-black",
   },
   {
@@ -112,13 +112,13 @@ export default function FloorAreaPage({ params }: Props) {
       <section className="border-b border-white/10 bg-gradient-to-br from-black via-zinc-950 to-black">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:px-6 md:py-24">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               {area.label}
             </p>
             <h1 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl">
               {area.headline}
             </h1>
-            <p className="mt-4 text-xl font-medium text-amber-glow">
+            <p className="mt-4 text-xl font-medium text-forest-light">
               {area.subheadline}
             </p>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -199,7 +199,7 @@ export default function FloorAreaPage({ params }: Props) {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Color Options
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -253,7 +253,7 @@ export default function FloorAreaPage({ params }: Props) {
                     />
                     <p className="text-sm font-black text-white">{chip.name}</p>
                     {chip.popular && (
-                      <span className="ml-auto rounded-full bg-red-600/80 px-1.5 py-0.5 text-[9px] font-black text-white">
+                      <span className="ml-auto rounded-full bg-forest/80 px-1.5 py-0.5 text-[9px] font-black text-white">
                         Popular
                       </span>
                     )}
@@ -268,7 +268,7 @@ export default function FloorAreaPage({ params }: Props) {
 
           <p className="mt-8 text-center text-sm text-muted-foreground">
             Custom blends available on request.{" "}
-            <Link href="/quote" className="font-bold text-amber-glow hover:underline">
+            <Link href="/quote" className="font-bold text-forest-light hover:underline">
               Request a sample at your estimate →
             </Link>
           </p>
@@ -329,7 +329,7 @@ export default function FloorAreaPage({ params }: Props) {
       <section className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Why It Matters
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -363,7 +363,7 @@ export default function FloorAreaPage({ params }: Props) {
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+                <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
                   Reviews
                 </p>
                 <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -376,7 +376,7 @@ export default function FloorAreaPage({ params }: Props) {
               <div className="rounded-2xl border border-white/10 bg-zinc-950 px-5 py-4 text-center">
                 <p className="text-3xl font-black text-white">
                   5.0{" "}
-                  <span className="text-amber-glow" aria-label="5 stars">
+                  <span className="text-forest-light" aria-label="5 stars">
                     ★★★★★
                   </span>
                 </p>
@@ -407,7 +407,7 @@ export default function FloorAreaPage({ params }: Props) {
                         </p>
                       </div>
                     </div>
-                    <div className="mt-3 text-amber-glow" aria-label="5 stars">
+                    <div className="mt-3 text-forest-light" aria-label="5 stars">
                       ★★★★★
                     </div>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-white/90">
@@ -447,7 +447,7 @@ export default function FloorAreaPage({ params }: Props) {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-r from-red-700 via-forest-dark to-forest py-16 md:py-20">
+      <section className="bg-gradient-to-r from-forest via-forest-dark to-forest py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <h2 className="text-3xl font-black text-white md:text-4xl">
             Ready to Transform Your {area.label.split(" ")[0]}?
@@ -482,7 +482,7 @@ export default function FloorAreaPage({ params }: Props) {
               <Link
                 key={a.slug}
                 href={`/floors/${a.slug}`}
-                className="text-sm font-semibold text-muted-foreground hover:text-amber-glow"
+                className="text-sm font-semibold text-muted-foreground hover:text-forest-light"
               >
                 {a.label} →
               </Link>

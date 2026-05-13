@@ -30,7 +30,7 @@ export default function TownServicePage({ params }: Props) {
     <div className="bg-ink">
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Local
           </p>
           <h1 className="mt-4 text-4xl font-black text-white md:text-5xl">
@@ -69,7 +69,7 @@ export default function TownServicePage({ params }: Props) {
             {SERVICES.slice(0, 4).map((s) => (
               <li key={s.slug}>
                 <Link
-                  className="font-semibold text-amber-glow hover:text-white"
+                  className="font-semibold text-forest-light hover:text-white"
                   href={`/services/${s.slug}`}
                 >
                   {s.title} →

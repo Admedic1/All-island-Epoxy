@@ -36,10 +36,10 @@ export function HassleFreeProcess() {
             key={s.title}
             className="rounded-2xl border border-white/10 bg-white/[0.03] p-7 text-center shadow-xl shadow-black/40"
           >
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-forest/20 text-amber-glow ring-2 ring-forest/35">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-forest/20 text-forest-light ring-2 ring-forest/35">
               <s.Icon className="h-7 w-7" />
             </div>
-            <p className="mt-4 text-xs font-black uppercase tracking-widest text-red-500">
+            <p className="mt-4 text-xs font-black uppercase tracking-widest text-forest-light">
               Step {idx + 1}
             </p>
             <p className="mt-2 text-xl font-black text-white">{s.title}</p>

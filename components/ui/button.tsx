@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "bg-forest text-white hover:bg-forest-light shadow-lg shadow-black/30",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-red-600",
+          "bg-destructive text-destructive-foreground hover:bg-forest",
         outline:
           "border border-white/20 bg-transparent text-white hover:bg-white/10",
         secondary:

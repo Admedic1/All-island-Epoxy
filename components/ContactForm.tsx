@@ -23,7 +23,7 @@ export function ContactForm() {
         <p className="text-lg font-black text-white">Message captured.</p>
         <p className="mt-2 text-muted-foreground">
           We&apos;ll reply shortly — or call{" "}
-          <a className="font-bold text-amber-glow" href={`tel:${SITE.phoneTel}`}>
+          <a className="font-bold text-forest-light" href={`tel:${SITE.phoneTel}`}>
             {SITE.phoneDisplay}
           </a>
           .

@@ -25,7 +25,7 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               Fastest path: call{" "}
-              <a className="font-black text-amber-glow" href={`tel:${SITE.phoneTel}`}>
+              <a className="font-black text-forest-light" href={`tel:${SITE.phoneTel}`}>
                 {SITE.phoneDisplay}
               </a>{" "}
               — or send details below.

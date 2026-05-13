@@ -124,12 +124,12 @@ export function ProcessSteps() {
                     damping: 16,
                     delay: 0.3 + idx * 0.1,
                   }}
-                  className="relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-forest/25 text-amber-glow ring-2 ring-forest/40 transition-all duration-300 group-hover:bg-forest/40 group-hover:ring-forest/60"
+                  className="relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-forest/25 text-forest-light ring-2 ring-forest/40 transition-all duration-300 group-hover:bg-forest/40 group-hover:ring-forest/60"
                 >
                   <step.Icon className="h-6 w-6" aria-hidden />
                 </motion.div>
 
-                <p className="mt-3 text-xs font-black uppercase tracking-widest text-red-500">
+                <p className="mt-3 text-xs font-black uppercase tracking-widest text-forest-light">
                   Step {idx + 1}
                 </p>
                 <p className="mt-2 text-lg font-black text-white">{step.title}</p>

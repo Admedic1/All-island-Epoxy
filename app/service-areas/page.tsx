@@ -15,7 +15,7 @@ export default function ServiceAreasPage() {
     <div className="bg-ink">
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-4 text-center md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Coverage
           </p>
           <h1 className="mt-4 text-4xl font-black text-white md:text-5xl">
@@ -50,7 +50,7 @@ export default function ServiceAreasPage() {
               href={`/service-areas/${t.slug}`}
               className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-black/80 p-6 shadow-lg shadow-black/40 transition hover:border-forest-light"
             >
-              <p className="text-xs font-black uppercase tracking-widest text-red-500">
+              <p className="text-xs font-black uppercase tracking-widest text-forest-light">
                 ZIP {t.zip}
               </p>
               <p className="mt-2 text-xl font-black text-white">{t.name}</p>
@@ -58,7 +58,7 @@ export default function ServiceAreasPage() {
                 Epoxy floor coating in {t.name}, NY — local crew, owner-led
                 installation.
               </p>
-              <p className="mt-4 text-sm font-black text-amber-glow">
+              <p className="mt-4 text-sm font-black text-forest-light">
                 View local page →
               </p>
             </Link>

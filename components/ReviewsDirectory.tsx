@@ -62,7 +62,7 @@ export function ReviewsDirectory() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-3 text-amber-glow" aria-hidden>
+                <div className="mt-3 text-forest-light" aria-hidden>
                   ★★★★★
                 </div>
               </div>

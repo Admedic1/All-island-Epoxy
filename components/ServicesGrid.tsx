@@ -63,7 +63,7 @@ export function ServicesGrid() {
     <div className="mx-auto max-w-7xl px-4 md:px-6" style={{ perspective: "1200px" }}>
       <MotionGroup className="mx-auto max-w-3xl text-center">
         <MotionItem>
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Coatings
           </p>
         </MotionItem>
@@ -91,7 +91,7 @@ export function ServicesGrid() {
                   <div className="flex h-full flex-col overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-gradient-to-b from-zinc-900/90 to-zinc-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
                     {/* Image */}
                     <div className="relative aspect-[16/10] overflow-hidden">
-                      <span className="absolute right-3 top-3 z-10 rounded-md bg-red-600 px-2 py-1 text-xs font-black text-white shadow-lg">
+                      <span className="absolute right-3 top-3 z-10 rounded-md bg-forest px-2 py-1 text-xs font-black text-white shadow-lg">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <Image
@@ -111,7 +111,7 @@ export function ServicesGrid() {
                     </CardHeader>
                     <CardContent className="flex-1" />
                     <CardFooter className="justify-between pb-6">
-                      <Button asChild variant="ghost" className="px-0 text-amber-glow">
+                      <Button asChild variant="ghost" className="px-0 text-forest-light">
                         <Link href={`/services/${service.slug}`}>
                           Learn more{" "}
                           <span

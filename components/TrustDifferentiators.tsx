@@ -28,7 +28,7 @@ export function TrustDifferentiators() {
   return (
     <div className="mx-auto max-w-7xl px-4 md:px-6">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+        <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
           Trust
         </p>
         <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -42,7 +42,7 @@ export function TrustDifferentiators() {
             key={item.title}
             className="rounded-2xl border border-white/10 bg-gradient-to-b from-zinc-900/70 to-black/70 p-6 shadow-xl shadow-black/40"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600/15 text-red-400 ring-2 ring-red-500/30">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest/15 text-forest-light ring-2 ring-forest/30">
               <item.Icon className="h-6 w-6" aria-hidden />
             </div>
             <p className="mt-4 text-lg font-black text-white">{item.title}</p>

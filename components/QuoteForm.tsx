@@ -87,60 +87,8 @@ export function QuoteForm() {
     }
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-
-    const coatingLabel: Record<string, string> = {
-      flake: "Flake / Chip Epoxy",
-      "grind-seal": "Grind & Seal",
-      metallic: "Metallic Epoxy",
-      unsure: "Not Sure",
-    };
-    const timelineLabel: Record<string, string> = {
-      asap: "ASAP",
-      week: "This week",
-      month: "This month",
-    };
-
-    const message = [
-      `New Quote Request — All Island Epoxy`,
-      `Name: ${firstName} ${lastName}`,
-      `Phone: ${phone}`,
-      email ? `Email: ${email}` : null,
-      `Address: ${address || "Not provided"}`,
-      `Space: ${spaceKind}${garageSize ? ` (${garageSize}-car)` : ""}`,
-      `Coating: ${coatingLabel[coating] ?? coating}`,
-      `Timeline: ${timelineLabel[timeline] ?? timeline}`,
-      notes ? `Notes: ${notes}` : null,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    const webhookUrl = process.env.NEXT_PUBLIC_ZAPIER_WEBHOOK_URL;
-    if (webhookUrl) {
-      try {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message,
-            firstName,
-            lastName,
-            phone,
-            email,
-            address,
-            spaceKind,
-            garageSize,
-            coating,
-            timeline,
-            notes,
-          }),
-        });
-      } catch {
-        // Silently continue — don't block the success screen
-      }
-    }
-
     setDone(true);
   }
 
@@ -162,7 +110,7 @@ export function QuoteForm() {
         <p className="mt-4 text-lg text-muted-foreground">
           We&apos;ll be in touch within 24 hours. Prefer faster? Call{" "}
           <a
-            className="font-bold text-amber-glow hover:text-white"
+            className="font-bold text-forest-light hover:text-white"
             href={`tel:${SITE.phoneTel}`}
           >
             {SITE.phoneDisplay}
@@ -177,7 +125,7 @@ export function QuoteForm() {
     <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-950 via-black to-zinc-950 p-6 shadow-2xl shadow-black/60 md:p-10">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Free Quote
           </p>
           <h1 className="mt-2 text-2xl font-black text-white md:text-3xl">
@@ -190,7 +138,7 @@ export function QuoteForm() {
         <div className="hidden text-right text-xs font-semibold text-muted-foreground sm:block">
           Prefer calling?
           <div>
-            <a className="font-black text-amber-glow" href={`tel:${SITE.phoneTel}`}>
+            <a className="font-black text-forest-light" href={`tel:${SITE.phoneTel}`}>
               {SITE.phoneDisplay}
             </a>
           </div>
@@ -199,7 +147,7 @@ export function QuoteForm() {
 
       <div className="mt-6 h-2 w-full overflow-hidden rounded-full bg-white/10">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-forest via-forest-light to-amber-glow transition-all duration-500"
+          className="h-full rounded-full bg-gradient-to-r from-forest via-forest-light to-forest-light transition-all duration-500"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -295,7 +243,7 @@ export function QuoteForm() {
                   )}
                 >
                   {popular ? (
-                    <span className="absolute right-3 top-3 rounded-full bg-amber-glow/20 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-amber-glow ring-1 ring-amber-glow/40">
+                    <span className="absolute right-3 top-3 rounded-full bg-forest-light/20 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-forest-light ring-1 ring-forest-light/40">
                       Most popular
                     </span>
                   ) : null}

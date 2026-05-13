@@ -46,7 +46,7 @@ export function BeforeAfterSlider({
             sizes="(max-width:768px) 100vw, 50vw"
           />
         </div>
-        <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-red-600 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-lg">
+        <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-forest px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-lg">
           Drag
         </div>
         <div className="pointer-events-none absolute bottom-4 left-4 rounded-full bg-black/70 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-white">

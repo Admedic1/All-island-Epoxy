@@ -81,8 +81,8 @@ const reviews = [
 function avatarColor(initial: string) {
   const palette = [
     { bg: "bg-forest/30", text: "text-forest-light", ring: "ring-forest/30" },
-    { bg: "bg-amber/20", text: "text-amber-glow", ring: "ring-amber/30" },
-    { bg: "bg-red-900/30", text: "text-red-400", ring: "ring-red-500/30" },
+    { bg: "bg-forest/20", text: "text-forest-light", ring: "ring-forest/30" },
+    { bg: "bg-forest-dark/30", text: "text-forest-light", ring: "ring-forest/30" },
     { bg: "bg-sky-900/30", text: "text-sky-400", ring: "ring-sky-500/30" },
   ];
   return palette[initial.charCodeAt(0) % palette.length];
@@ -93,7 +93,7 @@ export function ReviewsSection() {
 
   return (
     <motion.section
-      className="border-y border-red-600/40 bg-gradient-to-b from-zinc-950 via-black to-zinc-950 py-16 md:py-24"
+      className="border-y border-forest/40 bg-gradient-to-b from-zinc-950 via-black to-zinc-950 py-16 md:py-24"
       initial={reduced ? false : { opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -103,7 +103,7 @@ export function ReviewsSection() {
         <MotionGroup className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <MotionItem>
             <div className="max-w-3xl">
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+              <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
                 Reviews
               </p>
               <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -134,7 +134,7 @@ export function ReviewsSection() {
               </div>
               <p className="mt-2 text-3xl font-black text-white">
                 5.0{" "}
-                <span className="text-amber-glow" aria-label="5 stars">★★★★★</span>
+                <span className="text-forest-light" aria-label="5 stars">★★★★★</span>
               </p>
               <p className="text-sm font-semibold text-muted-foreground">
                 50+ verified reviews
@@ -200,7 +200,7 @@ export function ReviewsSection() {
                       </svg>
                     </div>
 
-                    <div className="mt-3 text-amber-glow" aria-label="5 stars">
+                    <div className="mt-3 text-forest-light" aria-label="5 stars">
                       ★★★★★
                     </div>
 

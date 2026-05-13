@@ -34,7 +34,7 @@ type FacilityCategory = {
 const FACILITY_CATEGORIES: FacilityCategory[] = [
   {
     heading: "Emergency Services & Government",
-    accent: "text-red-400",
+    accent: "text-forest-light",
     description:
       "Firehouses, police departments, and government facilities take serious punishment. Apparatus bays need seamless coatings that resist oil, fuel, standing water, and heavy equipment loads — and drain quickly for hosing down. We schedule installs around shift rotations and apparatus deployment.",
     types: [
@@ -50,7 +50,7 @@ const FACILITY_CATEGORIES: FacilityCategory[] = [
   },
   {
     heading: "Automotive & Transportation",
-    accent: "text-amber-glow",
+    accent: "text-forest-light",
     description:
       "Auto facilities need coatings that shrug off hot tires, oil, transmission fluid, brake cleaner, and power-washing. We spec chemical-resistant systems designed for real shop abuse — not showroom aesthetics. Long Island dealerships and independent shops trust us for consistent results and minimal downtime.",
     types: [
@@ -108,7 +108,7 @@ const FACILITY_CATEGORIES: FacilityCategory[] = [
   },
   {
     heading: "Industrial, Warehouse & Manufacturing",
-    accent: "text-amber-glow",
+    accent: "text-forest-light",
     description:
       "High-traffic industrial environments require systems engineered for forklift traffic, pallet drops, chemical spills, and 24/7 operation. We bring proper diamond grinding equipment to open the concrete and ensure commercial-grade adhesion — no shortcuts that lead to delamination.",
     types: [
@@ -148,7 +148,7 @@ const FACILITY_CATEGORIES: FacilityCategory[] = [
   },
   {
     heading: "Fitness, Recreation & Sports",
-    accent: "text-red-400",
+    accent: "text-forest-light",
     description:
       "Gym floors need to handle dropped weights, rubber-soled traffic, heavy equipment footprints, and daily sweating without bubbling, peeling, or becoming slippery. Seamless systems also simplify cleaning and eliminate the bacteria-trapping seams of rubber tile.",
     types: [
@@ -267,7 +267,7 @@ export default function CommercialEpoxyPage() {
       {/* ── Hero ── */}
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Commercial Services
           </p>
           <h1 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
@@ -336,7 +336,7 @@ export default function CommercialEpoxyPage() {
               <a
                 key={cat.heading}
                 href={`#${cat.heading.toLowerCase().replace(/[^a-z]+/g, "-")}`}
-                className="rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-sm font-semibold text-white/80 transition-colors hover:border-forest/40 hover:text-amber-glow"
+                className="rounded-full border border-white/15 bg-black/40 px-4 py-1.5 text-sm font-semibold text-white/80 transition-colors hover:border-forest/40 hover:text-forest-light"
               >
                 {cat.heading}
               </a>
@@ -401,7 +401,7 @@ export default function CommercialEpoxyPage() {
       <MotionSection className="border-b border-white/10 bg-black py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Nassau County
             </p>
             <h2 className="mt-3 text-2xl font-black text-white md:text-3xl">
@@ -421,7 +421,7 @@ export default function CommercialEpoxyPage() {
                 href={`/service-areas/${t.slug}`}
                 className="group rounded-xl border border-white/10 bg-zinc-950/60 px-4 py-3 transition-colors hover:border-forest/40 hover:bg-zinc-900"
               >
-                <p className="font-bold text-white group-hover:text-amber-glow">
+                <p className="font-bold text-white group-hover:text-forest-light">
                   {t.name}
                 </p>
                 <p className="mt-0.5 text-xs text-muted-foreground">
@@ -437,7 +437,7 @@ export default function CommercialEpoxyPage() {
       <MotionSection className="border-b border-white/10 bg-zinc-950 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               Suffolk County
             </p>
             <h2 className="mt-3 text-2xl font-black text-white md:text-3xl">
@@ -457,7 +457,7 @@ export default function CommercialEpoxyPage() {
                 href={`/service-areas/${t.slug}`}
                 className="group rounded-xl border border-white/10 bg-zinc-950/60 px-4 py-3 transition-colors hover:border-forest/40 hover:bg-zinc-900"
               >
-                <p className="font-bold text-white group-hover:text-amber-glow">
+                <p className="font-bold text-white group-hover:text-forest-light">
                   {t.name}
                 </p>
                 <p className="mt-0.5 text-xs text-muted-foreground">
@@ -513,7 +513,7 @@ export default function CommercialEpoxyPage() {
       <MotionSection className="border-b border-white/10 bg-zinc-950 py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
               FAQs
             </p>
             <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -533,7 +533,7 @@ export default function CommercialEpoxyPage() {
       </MotionSection>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-r from-red-700 via-forest-dark to-forest py-16 md:py-20">
+      <section className="bg-gradient-to-r from-forest via-forest-dark to-forest py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-white/80">
             Get Started

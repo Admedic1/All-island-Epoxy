@@ -44,7 +44,7 @@ export function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="hover:text-amber-glow"
+                  className="hover:text-forest-light"
                 >
                   {s.title}
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             {pages.map((p) => (
               <li key={p.href}>
-                <Link href={p.href} className="hover:text-amber-glow">
+                <Link href={p.href} className="hover:text-forest-light">
                   {p.label}
                 </Link>
               </li>
@@ -76,7 +76,7 @@ export function Footer() {
             <li>
               <a
                 href={`tel:${SITE.phoneTel}`}
-                className="font-bold text-white hover:text-amber-glow"
+                className="font-bold text-white hover:text-forest-light"
               >
                 {SITE.phoneDisplay}
               </a>
@@ -84,7 +84,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${SITE.email}`}
-                className="hover:text-amber-glow"
+                className="hover:text-forest-light"
               >
                 {SITE.email}
               </a>

@@ -41,7 +41,7 @@ export default function AboutPage() {
           then build thickness and clarity with premium materials.
         </p>
         <div className="rounded-2xl border border-white/10 bg-zinc-950/70 p-8 text-white">
-          <p className="text-sm font-black uppercase tracking-[0.35em] text-amber-glow">
+          <p className="text-sm font-black uppercase tracking-[0.35em] text-forest-light">
             Promise
           </p>
           <p className="mt-4 text-2xl font-black">

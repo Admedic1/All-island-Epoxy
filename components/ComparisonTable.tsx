@@ -17,7 +17,7 @@ function Cell({ ok }: { ok: boolean }) {
       {ok ? (
         <Check className="h-6 w-6 text-forest-light" aria-label="Yes" />
       ) : (
-        <X className="h-6 w-6 text-red-500" aria-label="No" />
+        <X className="h-6 w-6 text-forest-light" aria-label="No" />
       )}
     </div>
   );
@@ -27,7 +27,7 @@ export function ComparisonTable() {
   return (
     <div className="mx-auto max-w-7xl px-4 md:px-6">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-red-600">
+        <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
           Compare
         </p>
         <h2 className="mt-3 text-3xl font-black text-zinc-950 md:text-4xl">

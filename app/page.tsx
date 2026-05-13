@@ -66,7 +66,7 @@ export default function HomePage() {
         <ServiceAreasPills />
       </MotionSection>
 
-      <section className="bg-gradient-to-r from-red-700 via-forest-dark to-forest py-14">
+      <section className="bg-gradient-to-r from-forest via-forest-dark to-forest py-14">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:text-left md:px-6">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.35em] text-white/80">

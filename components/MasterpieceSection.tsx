@@ -21,7 +21,7 @@ export function MasterpieceSection() {
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.75, ease: EASE }}
       >
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+        <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
           Before &amp; After
         </p>
         <h2 className="mt-3 text-3xl font-black leading-tight text-white md:text-4xl">

@@ -49,7 +49,7 @@ export default function ServiceDetailPage({ params }: Props) {
       />
       <section className="border-b border-white/10 bg-gradient-to-b from-black via-zinc-950 to-black py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
             Service
           </p>
           <h1 className="mt-4 text-4xl font-black text-white md:text-5xl">

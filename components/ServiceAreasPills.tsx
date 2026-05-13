@@ -6,7 +6,7 @@ export function ServiceAreasPills() {
   return (
     <div className="mx-auto max-w-7xl px-4 md:px-6">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-red-500">
+        <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
           Coverage
         </p>
         <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">
@@ -23,7 +23,7 @@ export function ServiceAreasPills() {
           <Link
             key={t.slug}
             href={`/service-areas/${t.slug}`}
-            className="rounded-full border border-white/15 bg-black/40 px-4 py-2 text-sm font-semibold text-white hover:border-forest-light hover:text-amber-glow"
+            className="rounded-full border border-white/15 bg-black/40 px-4 py-2 text-sm font-semibold text-white hover:border-forest-light hover:text-forest-light"
           >
             {t.name}
           </Link>
@@ -33,7 +33,7 @@ export function ServiceAreasPills() {
       <div className="mt-8 flex justify-center">
         <Link
           href="/service-areas"
-          className="text-sm font-black uppercase tracking-wide text-forest-light hover:text-amber-glow"
+          className="text-sm font-black uppercase tracking-wide text-forest-light hover:text-forest-light"
         >
           View all ZIP codes & towns →
         </Link>

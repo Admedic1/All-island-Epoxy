@@ -24,7 +24,7 @@ export default function ShowroomPage() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
 
       <section className="relative mx-auto max-w-4xl px-4 py-20 text-center md:px-6 md:py-28">
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-glow">
+        <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
           Coming soon
         </p>
         <h1 className="mt-5 text-4xl font-black text-white md:text-6xl">
@@ -44,7 +44,7 @@ export default function ShowroomPage() {
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
             Prefer not to wait? Call{" "}
-            <a className="font-bold text-amber-glow" href={`tel:${SITE.phoneTel}`}>
+            <a className="font-bold text-forest-light" href={`tel:${SITE.phoneTel}`}>
               {SITE.phoneDisplay}
             </a>
             .
