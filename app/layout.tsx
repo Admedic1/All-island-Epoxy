@@ -18,6 +18,30 @@ export const metadata: Metadata = {
   title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
   description:
     "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured. Call (631) 636-5667.",
+  openGraph: {
+    title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
+    description:
+      "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured.",
+    url: "https://allislandepoxy.com",
+    siteName: "All Island Epoxy & Polishing",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "All Island Epoxy & Polishing — Long Island's Concrete Coating Specialists",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
+    description:
+      "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured.",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function RootLayout({
