@@ -62,6 +62,9 @@ export const metadata: Metadata = {
       "Long Island's epoxy floor coating specialists. Garages, basements, commercial spaces. Owner on every job.",
     images: ["/images/og-image.png"],
   },
+  verification: {
+    google: "K9m5CcocnaeNC4hh-HKnhQfsvtNF2_jwFiSiIBt5NYw",
+  },
   robots: {
     index: true,
     follow: true,
