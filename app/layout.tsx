@@ -15,14 +15,34 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
+  title: {
+    default: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
+    template: "%s | All Island Epoxy & Polishing",
+  },
   description:
-    "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured. Call (631) 636-5667.",
+    "All Island Epoxy & Polishing — Long Island's #1 epoxy floor coating company. Garage floors, basement floors, commercial coatings. Licensed & insured. Owner on every job. Serving Nassau & Suffolk County. Call (631) 636-5667.",
+  keywords: [
+    "epoxy floor coating Long Island",
+    "garage floor epoxy Long Island",
+    "All Island Epoxy",
+    "All Island Epoxy and Polishing",
+    "epoxy floors Nassau County",
+    "epoxy floors Suffolk County",
+    "basement epoxy floor Long Island",
+    "commercial epoxy floor Long Island",
+    "concrete floor coating Long Island NY",
+    "flake epoxy garage floor",
+    "metallic epoxy floor Long Island",
+  ],
+  metadataBase: new URL("https://allislandepoxy.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
     description:
-      "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured.",
-    url: "https://allislandepoxy.com",
+      "Long Island's epoxy floor coating specialists. Garages, basements, commercial spaces. Owner on every job. Licensed & insured. Nassau & Suffolk County.",
+    url: "https://allislandepoxy.vercel.app",
     siteName: "All Island Epoxy & Polishing",
     images: [
       {
@@ -39,8 +59,19 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
     description:
-      "Residential & commercial epoxy floors across Long Island, NY. Owner on every job. Licensed & insured.",
+      "Long Island's epoxy floor coating specialists. Garages, basements, commercial spaces. Owner on every job.",
     images: ["/images/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
