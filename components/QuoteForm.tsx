@@ -87,8 +87,60 @@ export function QuoteForm() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    const coatingLabel: Record<string, string> = {
+      flake: "Flake / Chip Epoxy",
+      "grind-seal": "Grind & Seal",
+      metallic: "Metallic Epoxy",
+      unsure: "Not Sure",
+    };
+    const timelineLabel: Record<string, string> = {
+      asap: "ASAP",
+      week: "This week",
+      month: "This month",
+    };
+
+    const message = [
+      `New Quote Request — All Island Epoxy`,
+      `Name: ${firstName} ${lastName}`,
+      `Phone: ${phone}`,
+      email ? `Email: ${email}` : null,
+      `Address: ${address || "Not provided"}`,
+      `Space: ${spaceKind}${garageSize ? ` (${garageSize}-car)` : ""}`,
+      `Coating: ${coatingLabel[coating] ?? coating}`,
+      `Timeline: ${timelineLabel[timeline] ?? timeline}`,
+      notes ? `Notes: ${notes}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const webhookUrl = process.env.NEXT_PUBLIC_ZAPIER_WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message,
+            firstName,
+            lastName,
+            phone,
+            email,
+            address,
+            spaceKind,
+            garageSize,
+            coating,
+            timeline,
+            notes,
+          }),
+        });
+      } catch {
+        // Silently continue — don't block the success screen
+      }
+    }
+
     setDone(true);
   }
 
