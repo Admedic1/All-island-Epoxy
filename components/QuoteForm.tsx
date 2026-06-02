@@ -116,29 +116,26 @@ export function QuoteForm() {
       .filter(Boolean)
       .join("\n");
 
-    const webhookUrl = process.env.NEXT_PUBLIC_ZAPIER_WEBHOOK_URL;
-    if (webhookUrl) {
-      try {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message,
-            firstName,
-            lastName,
-            phone,
-            email,
-            address,
-            spaceKind,
-            garageSize,
-            coating,
-            timeline,
-            notes,
-          }),
-        });
-      } catch {
-        // Silently continue — don't block the success screen
-      }
+    try {
+      await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message,
+          firstName,
+          lastName,
+          phone,
+          email,
+          address,
+          spaceKind,
+          garageSize,
+          coating,
+          timeline,
+          notes,
+        }),
+      });
+    } catch {
+      // Silently continue — don't block the success screen
     }
 
     setDone(true);
