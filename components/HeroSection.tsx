@@ -125,14 +125,6 @@ export function HeroSection() {
           initial={reduced ? false : "hidden"}
           animate="show"
         >
-          {/* Eyebrow tag */}
-          <motion.p
-            variants={reduced ? undefined : itemVariants}
-            className="text-xs font-black uppercase tracking-[0.35em] text-forest-light"
-          >
-            {SITE.tagline}
-          </motion.p>
-
           {/* H1 — line-by-line mask reveal */}
           <motion.h1
             variants={reduced ? undefined : h1Container}
