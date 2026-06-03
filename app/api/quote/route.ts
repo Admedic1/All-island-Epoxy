@@ -8,8 +8,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
   }
 
+  // Append all fields as query params so Zapier displays them immediately
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(body)) {
+    if (value !== null && value !== undefined && value !== "") {
+      params.append(key, String(value));
+    }
+  }
+  const urlWithParams = `${webhookUrl}?${params.toString()}`;
+
   try {
-    const res = await fetch(webhookUrl, {
+    const res = await fetch(urlWithParams, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
