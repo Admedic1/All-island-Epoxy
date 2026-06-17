@@ -142,7 +142,7 @@ export const FLOOR_AREAS: FloorArea[] = [
         a: "Properly installed flake systems with a polyaspartic topcoat typically last 10–20 years under normal residential use. Prep quality is the biggest factor — grinding beats acid etching every time.",
       },
       {
-        q: "Can I park on it the same day?",
+        q: "When can I park on it?",
         a: "With polyaspartic topcoats, light foot traffic is often possible within hours. Vehicle traffic typically requires 24–48 hours depending on temperature and the system used. We confirm this with you at completion.",
       },
       {

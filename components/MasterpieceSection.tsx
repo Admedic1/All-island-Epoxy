@@ -25,7 +25,7 @@ export function MasterpieceSection() {
           Before &amp; After
         </p>
         <h2 className="mt-3 text-3xl font-black leading-tight text-white md:text-4xl">
-          Your Floor, Completely Redone — In One Day
+          Your Floor, Completely Redone
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Cracked concrete. Oil stains. Peeling paint. We&apos;ve seen it all — and

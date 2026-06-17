@@ -37,7 +37,7 @@ const steps = [
   },
   {
     title: "You&apos;re Done",
-    body: "Most jobs wrap up the same day. Walk on it that night. Park on it tomorrow.",
+    body: "We walk you through cure times before we leave. You&apos;ll know when you can walk, move things back, and park.",
     Icon: Sparkles,
   },
 ];

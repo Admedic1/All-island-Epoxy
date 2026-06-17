@@ -11,7 +11,7 @@ import { MotionGroup, MotionItem } from "@/components/MotionSection";
 const faqs = [
   {
     q: "How long does installation take?",
-    a: "Most residential garages are completed in a single day depending on square footage, repairs, and the system you choose. We'll confirm timing before we start.",
+    a: "Timing depends on your floor, repairs, and the system you choose. Most jobs take more than one day. We confirm the full schedule before we start.",
   },
   {
     q: "How long before I can walk or drive on the floor?",

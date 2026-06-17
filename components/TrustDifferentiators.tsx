@@ -13,8 +13,8 @@ const items = [
     Icon: Hammer,
   },
   {
-    title: "Done In One Day",
-    body: "Most homes are finished the same day we start. You&apos;re not waiting around for a week.",
+    title: "Clear Schedule Up Front",
+    body: "We tell you how long your job will take before we start. Prep, coats, and cure time depend on your floor.",
     Icon: Clock3,
   },
   {

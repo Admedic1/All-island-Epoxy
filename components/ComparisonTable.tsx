@@ -7,7 +7,7 @@ const rows: { label: string; us: boolean; bigBox: boolean; generic: boolean }[] 
     { label: "Professional equipment", us: true, bigBox: true, generic: true },
     { label: "Premium materials", us: true, bigBox: false, generic: false },
     { label: "Licensed & insured", us: true, bigBox: true, generic: true },
-    { label: "Same-day install (most homes)", us: true, bigBox: false, generic: false },
+    { label: "Clear schedule before we start", us: true, bigBox: false, generic: false },
     { label: "Local Long Island company", us: true, bigBox: false, generic: true },
   ];
 
