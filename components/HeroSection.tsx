@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MagneticButton } from "@/components/MagneticButton";
 
-const HERO_IMAGE = "/images/hero-showroom-metallic-floor.png";
+const HERO_IMAGE = "/images/hero-background.png";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 // H1 splits into these display lines
@@ -101,21 +101,21 @@ export function HeroSection() {
       {/* Background with scroll parallax */}
       <motion.div
         style={{ y: reduced ? "0%" : bgY }}
-        className="absolute inset-0 scale-105"
+        className="absolute inset-0 scale-110"
       >
         <Image
           src={HERO_IMAGE}
-          alt="Metallic epoxy floor sample at All Island Epoxy supply showroom — Bohemia, Long Island NY"
+          alt="Garage epoxy flake floor with All Island Epoxy company van — Long Island"
           fill
           priority
-          className="object-cover object-[50%_78%] brightness-110 contrast-105 md:object-[50%_82%]"
+          className="object-cover object-[center_65%] brightness-105 md:object-[center_60%]"
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Gradient overlays — keep text readable, let the floor stay bright */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/15 to-transparent" />
+      {/* Gradient overlays — lighter on the right so the floor pops */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/5" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black/25 to-transparent" />
 
       {/* Content */}
       <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 py-24 md:flex-row md:items-center md:px-6 lg:py-32">

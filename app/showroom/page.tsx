@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const STORE_PHOTOS = [
   {
-    src: "/images/showroom/showroom-metallic-floor-display.png",
+    src: "/images/hero-showroom-metallic-floor.png",
     alt: "US Resin Supply showroom with metallic epoxy floor sample and flake display board in Bohemia NY",
     caption: "Walk the floor. See real metallic and flake finishes in person.",
   },
@@ -62,14 +62,14 @@ export default function ShowroomPage() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden border-b border-forest/40">
         <Image
-          src="/images/showroom/showroom-metallic-floor-display.png"
+          src="/images/hero-showroom-metallic-floor.png"
           alt=""
           fill
-          className="object-cover opacity-50"
+          className="object-cover object-[50%_78%] brightness-110 contrast-105 md:object-[50%_82%]"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10" />
 
         <div className="relative mx-auto max-w-4xl px-4 py-20 md:px-6 md:py-28">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
