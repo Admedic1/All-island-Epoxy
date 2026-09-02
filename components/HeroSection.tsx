@@ -108,14 +108,14 @@ export function HeroSection() {
           alt="Garage epoxy flake floor with All Island Epoxy company van — Long Island"
           fill
           priority
-          className="object-cover object-[center_65%] opacity-90 md:object-[center_60%]"
+          className="object-cover object-[center_65%] brightness-105 md:object-[center_60%]"
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/20" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-48 w-full bg-gradient-to-t from-black/40 to-transparent" />
+      {/* Gradient overlays — lighter on the right so the floor pops */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/5" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black/25 to-transparent" />
 
       {/* Content */}
       <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 py-24 md:flex-row md:items-center md:px-6 lg:py-32">
