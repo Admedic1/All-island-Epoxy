@@ -52,17 +52,17 @@ export function TrustDifferentiators() {
       </div>
 
       {/* Supplier partner badge */}
-      <div className="mt-12 flex flex-col items-center gap-3">
+      <div className="mt-12 flex flex-col items-center gap-4">
         <p className="text-xs font-black uppercase tracking-[0.3em] text-muted-foreground">
           Authorized Supplier
         </p>
-        <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white p-3 shadow-lg shadow-black/40">
+        <div className="relative h-36 w-36 overflow-hidden rounded-full border border-white/20 bg-black shadow-2xl shadow-black/60 ring-2 ring-white/10 md:h-40 md:w-40">
           <Image
             src="/images/us-resin-supply-logo.png"
             alt="U.S. Resin Supply & Manufacturing authorized supplier"
-            width={80}
-            height={80}
-            className="object-contain"
+            fill
+            sizes="(max-width: 768px) 144px, 160px"
+            className="object-contain p-[8%]"
           />
         </div>
       </div>

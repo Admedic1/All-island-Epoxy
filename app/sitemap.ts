@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://allislandepoxy.vercel.app";
+const BASE_URL = "https://www.allislandepoxyny.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -93,6 +93,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/showroom`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/faq`,

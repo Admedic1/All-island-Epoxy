@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "flake epoxy garage floor",
     "metallic epoxy floor Long Island",
   ],
-  metadataBase: new URL("https://allislandepoxy.vercel.app"),
+  metadataBase: new URL("https://www.allislandepoxyny.com"),
   alternates: {
     canonical: "/",
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "All Island Epoxy & Polishing | Epoxy Floor Coating Long Island NY",
     description:
       "Long Island's epoxy floor coating specialists. Garages, basements, commercial spaces. Owner on every job. Licensed & insured. Nassau & Suffolk County.",
-    url: "https://allislandepoxy.vercel.app",
+    url: "https://www.allislandepoxyny.com",
     siteName: "All Island Epoxy & Polishing",
     images: [
       {

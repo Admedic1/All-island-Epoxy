@@ -11,7 +11,7 @@ const pages = [
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
   { href: "/quote", label: "Free Quote" },
-  { href: "/showroom", label: "Showroom" },
+  { href: "/showroom", label: "Supply Store" },
 ];
 
 export function Footer() {
