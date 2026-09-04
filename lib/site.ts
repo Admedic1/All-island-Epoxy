@@ -9,7 +9,7 @@ export const SITE = {
   hours: "Mon–Sat 8AM–6PM",
   region: "Long Island, NY",
   store: {
-    name: "All Island Epoxy Supply Store",
+    name: "US Resin Supply of Long Island",
     street: "1401 Church St",
     suite: "Suite 2",
     city: "Bohemia",

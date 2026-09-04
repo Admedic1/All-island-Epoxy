@@ -6,9 +6,9 @@ import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Epoxy Supply Store Bohemia NY | Flakes, Tools & Samples",
+  title: "US Resin Supply of Long Island",
   description:
-    "Visit our Bohemia, NY supply store at 1401 Church St Suite 2. Epoxy flakes, prep tools, grinders, squeegees, and live floor samples for contractors and homeowners.",
+    "Visit US Resin Supply of Long Island at 1401 Church St Suite 2, Bohemia. Epoxy flakes, prep tools, grinders, squeegees, and live floor samples for contractors and homeowners.",
 };
 
 const STORE_PHOTOS = [
@@ -71,18 +71,19 @@ export default function ShowroomPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10" />
 
-        <div className="relative mx-auto max-w-4xl px-4 py-20 md:px-6 md:py-28">
+        <div className="relative mx-auto max-w-5xl px-4 py-20 md:px-6 md:py-28">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-forest-light">
-            In-Person Store
+            Showroom &amp; Supply Store
           </p>
-          <h1 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
-            Epoxy Supplies, Flakes &amp; Live Floor Samples
+          <h1 className="mt-4 text-4xl font-black leading-[0.95] tracking-tight text-white md:text-6xl lg:text-7xl">
+            US Resin Supply
+            <span className="block text-forest-light">of Long Island</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-            Our Bohemia store is built for epoxy contractors who need reliable
-            supplies — and homeowners who want to see real samples before they
-            commit. From concrete prep to the final topcoat, we stock what the
-            job actually takes.
+            Epoxy supplies, flakes, and live floor samples — in Bohemia. Built
+            for contractors who need reliable stock, and homeowners who want to
+            see real floors before they commit. From concrete prep to the final
+            topcoat, we stock what the job actually takes.
           </p>
 
           <div className="mt-8 rounded-2xl border border-white/10 bg-black/50 p-6 backdrop-blur">
@@ -90,6 +91,9 @@ export default function ShowroomPage() {
               Visit Us
             </p>
             <p className="mt-2 text-xl font-black text-white">
+              {SITE.store.name}
+            </p>
+            <p className="mt-1 text-base font-semibold text-white/90">
               {SITE.store.fullAddress}
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -123,7 +127,7 @@ export default function ShowroomPage() {
             pour.
           </p>
           <p>
-            We work with US Resin Supply &amp; Manufacturing and keep the
+            This is the Long Island store for US Resin Supply. We keep the
             products contractors trust — not discount knockoffs that fail after
             one hot summer.
           </p>
@@ -277,7 +281,10 @@ export default function ShowroomPage() {
               <h2 className="text-3xl font-black text-white md:text-4xl">
                 Come See It In Person
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-lg font-bold text-white">
+                {SITE.store.name}
+              </p>
+              <p className="mt-1 text-lg text-muted-foreground">
                 {SITE.store.fullAddress}
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
@@ -304,7 +311,7 @@ export default function ShowroomPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={`${SITE.shortName} supply store — ${SITE.store.fullAddress}`}
+                title={`${SITE.store.name} — ${SITE.store.fullAddress}`}
               />
             </div>
           </div>
