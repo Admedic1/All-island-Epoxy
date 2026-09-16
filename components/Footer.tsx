@@ -12,6 +12,8 @@ const pages = [
   { href: "/contact", label: "Contact" },
   { href: "/quote", label: "Free Quote" },
   { href: "/showroom", label: "US Resin Supply" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms & Conditions" },
 ];
 
 export function Footer() {

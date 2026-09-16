@@ -5,15 +5,45 @@ import { useState } from "react";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SmsConsent } from "@/components/SmsConsent";
 import { Textarea } from "@/components/ui/textarea";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!smsConsent) {
+      setConsentError(
+        "Check the box to receive quote and appointment texts, or call us instead.",
+      );
+      return;
+    }
     const fd = new FormData(e.currentTarget);
-    console.log("contact form:", Object.fromEntries(fd.entries()));
+    const payload = {
+      firstName: String(fd.get("name") ?? ""),
+      phone: String(fd.get("phone") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      notes: String(fd.get("message") ?? ""),
+      source: "contact",
+      smsConsent: true,
+      marketingConsent,
+      smsConsentAt: new Date().toISOString(),
+    };
+
+    try {
+      await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch {
+      // Don't block the success screen
+    }
+
     setSent(true);
   }
 
@@ -60,6 +90,16 @@ export function ContactForm() {
         </label>
         <Textarea name="message" className="mt-2" required />
       </div>
+      <SmsConsent
+        smsChecked={smsConsent}
+        marketingChecked={marketingConsent}
+        onSmsChange={(checked) => {
+          setSmsConsent(checked);
+          if (checked) setConsentError("");
+        }}
+        onMarketingChange={setMarketingConsent}
+        error={consentError}
+      />
       <Button type="submit" className="font-black uppercase">
         Send message
       </Button>

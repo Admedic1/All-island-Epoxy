@@ -6,6 +6,7 @@ import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SmsConsent } from "@/components/SmsConsent";
 import { Textarea } from "@/components/ui/textarea";
 
 type SpaceKind =
@@ -44,6 +45,9 @@ export function QuoteForm() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [notes, setNotes] = useState("");
+  const [smsConsent, setSmsConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const [consentError, setConsentError] = useState("");
 
   const progress = useMemo(
     () => Math.round((step / TOTAL_STEPS) * 100),
@@ -90,6 +94,13 @@ export function QuoteForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
+    if (!smsConsent) {
+      setConsentError(
+        "Check the box to receive quote and appointment texts, or call us instead.",
+      );
+      return;
+    }
+
     const coatingLabel: Record<string, string> = {
       flake: "Flake / Chip Epoxy",
       "grind-seal": "Grind & Seal",
@@ -107,6 +118,8 @@ export function QuoteForm() {
       `Name: ${firstName} ${lastName}`,
       `Phone: ${phone}`,
       email ? `Email: ${email}` : null,
+      `SMS consent: yes`,
+      `Marketing texts: ${marketingConsent ? "yes" : "no"}`,
       `Address: ${address || "Not provided"}`,
       `Space: ${spaceKind}${garageSize ? ` (${garageSize}-car)` : ""}`,
       `Coating: ${coatingLabel[coating] ?? coating}`,
@@ -132,6 +145,9 @@ export function QuoteForm() {
           coating,
           timeline,
           notes,
+          smsConsent: true,
+          marketingConsent,
+          smsConsentAt: new Date().toISOString(),
         }),
       });
     } catch {
@@ -406,6 +422,16 @@ export function QuoteForm() {
                 placeholder="Tell us about drainage issues, timeline constraints, or color goals."
               />
             </div>
+            <SmsConsent
+              smsChecked={smsConsent}
+              marketingChecked={marketingConsent}
+              onSmsChange={(checked) => {
+                setSmsConsent(checked);
+                if (checked) setConsentError("");
+              }}
+              onMarketingChange={setMarketingConsent}
+              error={consentError}
+            />
           </div>
         )}
 
