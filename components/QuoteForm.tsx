@@ -94,10 +94,13 @@ export function QuoteForm() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    if (!smsConsent) {
-      setConsentError(
-        "Check the box to receive quote and appointment texts, or call us instead.",
-      );
+    if (!phone.trim() && !email.trim()) {
+      setConsentError("Leave a phone number or email so we can get back to you.");
+      return;
+    }
+
+    if ((smsConsent || marketingConsent) && !phone.trim()) {
+      setConsentError("Add a phone number if you want texts.");
       return;
     }
 
@@ -116,9 +119,9 @@ export function QuoteForm() {
     const message = [
       `New Quote Request — All Island Epoxy`,
       `Name: ${firstName} ${lastName}`,
-      `Phone: ${phone}`,
-      email ? `Email: ${email}` : null,
-      `SMS consent: yes`,
+      phone ? `Phone: ${phone}` : `Phone: Not provided`,
+      email ? `Email: ${email}` : `Email: Not provided`,
+      `SMS consent: ${smsConsent ? "yes" : "no"}`,
       `Marketing texts: ${marketingConsent ? "yes" : "no"}`,
       `Address: ${address || "Not provided"}`,
       `Space: ${spaceKind}${garageSize ? ` (${garageSize}-car)` : ""}`,
@@ -145,9 +148,10 @@ export function QuoteForm() {
           coating,
           timeline,
           notes,
-          smsConsent: true,
+          smsConsent,
           marketingConsent,
-          smsConsentAt: new Date().toISOString(),
+          smsConsentAt:
+            smsConsent || marketingConsent ? new Date().toISOString() : "",
         }),
       });
     } catch {
@@ -378,12 +382,11 @@ export function QuoteForm() {
               </div>
               <div>
                 <label className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-                  Phone (required)
+                  Phone (optional)
                 </label>
                 <Input
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  required
                   inputMode="tel"
                   className="mt-2"
                 />
@@ -425,6 +428,7 @@ export function QuoteForm() {
             <SmsConsent
               smsChecked={smsConsent}
               marketingChecked={marketingConsent}
+              requireSms={false}
               onSmsChange={(checked) => {
                 setSmsConsent(checked);
                 if (checked) setConsentError("");

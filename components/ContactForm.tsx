@@ -16,22 +16,30 @@ export function ContactForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!smsConsent) {
-      setConsentError(
-        "Check the box to receive quote and appointment texts, or call us instead.",
-      );
+    const fd = new FormData(e.currentTarget);
+    const phone = String(fd.get("phone") ?? "").trim();
+    const email = String(fd.get("email") ?? "").trim();
+
+    if (!phone && !email) {
+      setConsentError("Leave a phone number or email so we can get back to you.");
       return;
     }
-    const fd = new FormData(e.currentTarget);
+
+    if ((smsConsent || marketingConsent) && !phone) {
+      setConsentError("Add a phone number if you want texts.");
+      return;
+    }
+
     const payload = {
       firstName: String(fd.get("name") ?? ""),
-      phone: String(fd.get("phone") ?? ""),
-      email: String(fd.get("email") ?? ""),
+      phone,
+      email,
       notes: String(fd.get("message") ?? ""),
       source: "contact",
-      smsConsent: true,
+      smsConsent,
       marketingConsent,
-      smsConsentAt: new Date().toISOString(),
+      smsConsentAt:
+        smsConsent || marketingConsent ? new Date().toISOString() : "",
     };
 
     try {
@@ -73,14 +81,14 @@ export function ContactForm() {
         </div>
         <div>
           <label className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-            Phone
+            Phone (optional)
           </label>
-          <Input name="phone" required inputMode="tel" className="mt-2" />
+          <Input name="phone" inputMode="tel" className="mt-2" />
         </div>
       </div>
       <div>
         <label className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
-          Email
+          Email (optional)
         </label>
         <Input type="email" name="email" className="mt-2" />
       </div>
@@ -93,6 +101,7 @@ export function ContactForm() {
       <SmsConsent
         smsChecked={smsConsent}
         marketingChecked={marketingConsent}
+        requireSms={false}
         onSmsChange={(checked) => {
           setSmsConsent(checked);
           if (checked) setConsentError("");
